@@ -1,0 +1,26 @@
+{
+  "name": "cf-ai-study-buddy",
+  "main": "src/server.ts",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "public"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "StudyBuddyAgent",
+        "class_name": "StudyBuddyAgent"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["StudyBuddyAgent"]
+    }
+  ]
+}
